@@ -1,0 +1,49 @@
+#include <Rcpp.h>
+using namespace Rcpp;
+
+struct c_unique {
+  int current;
+  c_unique() {current=0;}
+  int operator()() {return ++current;}
+} UniqueNumber;
+
+void fun_print (int i) {
+  Rcpp::Rcout << i << ' ';
+};
+
+//' Annotate a matrix and return network edges
+//'
+//' This function returns edges of networked
+//' ions
+//'
+//' @param mass A numeric vector
+//' @inheritParams match_tables
+//' @return Return a numeric vector of network edges
+//' @export
+//'
+// [[Rcpp::export]]
+Rcpp::NumericVector annotate_spectra(
+  Rcpp::NumericVector mass,
+  bool debugL = false
+) {
+  // Iterate over every unique combination of two elements
+  int n = mass.length()-1;
+  int r = 2;
+  double diff_i = 0;
+  std::vector<int> myints(r);
+  std::vector<int>::iterator first = myints.begin(), last = myints.end();
+  std::generate(first, last, UniqueNumber);
+  std::for_each(first, last, fun_print);
+  while((*first) != n-r+1) {
+      std::vector<int>::iterator mt = last;
+      while (*(--mt) == n-(last-mt)+1);
+      (*mt)++;
+      while (++mt != last) *mt = *(mt-1)+1;
+      diff_i = mass[*(last-1)] - mass[*first];
+      if (debugL) {
+        Rcout << *(last-1) << ":" << *first << "=" << diff_i << "\n";
+      }
+      //Rcpp::Rcout << *last << ":" << *first;
+  }
+  return mass;
+}

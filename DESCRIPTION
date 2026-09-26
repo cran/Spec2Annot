@@ -1,0 +1,38 @@
+Package: Spec2Annot
+Title: Annotation of Mass Spectra
+Version: 1.3.4
+Authors@R: 
+    c(
+      person(given = "Sylvain", family = "Dechaumet", email = "sylvain.dechaumet@cea.fr", role = c("aut", "cre")),
+      person(given = "Etienne", family = "Thevenot", email = "etienne.thevenot@cea.fr", role = c("ctb")),
+      person(given = "Eric", family = "Venot", email = "eric.venot@cea.fr", role = c("rev")),
+      person(given = "Annelaure", family = "Damont", email = "annelaure.damont@cea.fr", role = c("ctb")),
+      person(given = "Anaïs", family = "Legrand", email = "anais.legrand@cea.fr", role = c("ctb"))
+    )
+Description: Provides a comprehensive suite of functions to efficiently annotate mass spectra data.
+              Motivated by the need for rapid and accurate chemical identification in high-resolution mass
+              spectrometry, it integrates built-in chemical databases and high-performance C++ algorithms.
+              Users can perform mass-to-charge (m/Z) and retention time searches, determine elemental
+              compositions of molecules using heuristic rules, including specific isotopes, and annotate MS2
+              spectra with structural metrics using configurable chemistry rules.
+License: CeCILL
+URL: https://github.com/odisce/Spec2Annot
+BugReports: https://github.com/odisce/Spec2Annot/issues
+Depends: R (>= 4.0.0)
+Encoding: UTF-8
+Imports: data.table, magrittr, Rcpp, stringr
+Suggests: testthat (>= 3.0.0)
+Config/testthat/edition: 3
+LazyData: true
+LinkingTo: Rcpp
+Config/roxygen2/version: 8.0.0
+NeedsCompilation: yes
+Packaged: 2026-09-15 15:03:47 UTC; SD265344
+Author: Sylvain Dechaumet [aut, cre],
+  Etienne Thevenot [ctb],
+  Eric Venot [rev],
+  Annelaure Damont [ctb],
+  Anaïs Legrand [ctb]
+Maintainer: Sylvain Dechaumet <sylvain.dechaumet@cea.fr>
+Repository: CRAN
+Date/Publication: 2026-09-26 16:40:25 UTC
