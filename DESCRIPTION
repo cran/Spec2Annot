@@ -1,6 +1,6 @@
 Package: Spec2Annot
 Title: Annotation of Mass Spectra
-Version: 1.3.4
+Version: 1.3.5
 Authors@R: 
     c(
       person(given = "Sylvain", family = "Dechaumet", email = "sylvain.dechaumet@cea.fr", role = c("aut", "cre")),
@@ -27,7 +27,7 @@ LazyData: true
 LinkingTo: Rcpp
 Config/roxygen2/version: 8.0.0
 NeedsCompilation: yes
-Packaged: 2026-09-15 15:03:47 UTC; SD265344
+Packaged: 2026-09-28 06:27:32 UTC; SD265344
 Author: Sylvain Dechaumet [aut, cre],
   Etienne Thevenot [ctb],
   Eric Venot [rev],
@@ -35,4 +35,4 @@ Author: Sylvain Dechaumet [aut, cre],
   Anaïs Legrand [ctb]
 Maintainer: Sylvain Dechaumet <sylvain.dechaumet@cea.fr>
 Repository: CRAN
-Date/Publication: 2026-09-26 16:40:25 UTC
+Date/Publication: 2026-09-28 06:50:02 UTC
